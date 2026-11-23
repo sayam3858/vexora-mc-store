@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10150f">
+<title>VEXORA MC | Premium Store</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+ font-family:Arial,sans-serif;
+ background:#0b100d;
+ color:#fff;
+}
+header{
+ background:#141d17;
+ padding:22px 15px;
+ text-align:center;
+ border-bottom:1px solid #35452f;
+}
+.logo{
+ color:#e9bd55;
+ font-size:32px;
+ font-weight:900;
+ letter-spacing:3px;
+}
+header p{color:#aaa;margin-top:7px}
+.hero{
+ text-align:center;
+ padding:45px 15px 30px;
+}
+.hero h1{font-size:32px;color:#e9bd55}
+.hero p{color:#bbb;margin-top:12px;line-height:1.6}
+.container{
+ max-width:950px;
+ margin:auto;
+ padding:20px;
+}
+h2{
+ color:#e9bd55;
+ margin:25px 0 18px;
+ text-align:center;
+}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+ gap:15px;
+}
+.card{
+ background:#141d17;
+ border:1px solid #344431;
+ border-radius:14px;
+ padding:22px 15px;
+ text-align:center;
+ transition:.2s;
+}
+.card:hover{
+ transform:translateY(-4px);
+ border-color:#e9bd55;
+}
+.emoji{font-size:42px;margin-bottom:12px}
+.card h3{font-size:21px;margin-bottom:10px}
+.price{
+ color:#e9bd55;
+ font-size:24px;
+ font-weight:bold;
+ margin:12px 0;
+}
+.card p{color:#aaa;font-size:14px;line-height:1.5}
+button{
+ background:#e9bd55;
+ color:#10150f;
+ border:0;
+ border-radius:8px;
+ padding:12px 18px;
+ font-weight:bold;
+ cursor:pointer;
+ margin-top:15px;
+ width:100%;
+}
+button:hover{background:#ffdb78}
+.formbox{
+ background:#141d17;
+ border:1px solid #344431;
+ border-radius:14px;
+ padding:22px;
+ margin-top:30px;
+}
+label{display:block;margin:14px 0 7px;color:#ddd}
+input,select{
+ width:100%;
+ padding:13px;
+ border-radius:8px;
+ border:1px solid #43513f;
+ background:#0b100d;
+ color:white;
+ font-size:15px;
+}
+footer{
+ text-align:center;
+ padding:30px 15px;
+ color:#888;
+ font-size:13px;
+}
+.notice{
+ color:#aaa;
+ font-size:12px;
+ line-height:1.5;
+ margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="logo">VEXORA MC</div>
+ <p>OFFICIAL MINECRAFT SERVER STORE</p>
+</header>
+
+<section class="hero">
+ <h1>PREMIUM STORE</h1>
+ <p>Upgrade your adventure with coins and exclusive ranks!<br>
+ Choose your package and preview your order.</p>
+</section>
+
+<main class="container">
+
+<h2>💎 COIN PACKAGES</h2>
+
+<div class="grid">
+
+<div class="card">
+ <div class="emoji">🪙</div>
+ <h3>100 Coins</h3>
+ <div class="price">₹29</div>
+ <p>Starter coin package</p>
+ <button onclick="choose('100 Coins','₹29')">Select Package</button>
+</div>
+
+<div class="card">
+ <div class="emoji">💰</div>
+ <h3>250 Coins</h3>
+ <div class="price">₹59</div>
+ <p>Popular coin package</p>
+ <button onclick="choose('250 Coins','₹59')">Select Package</button>
+</div>
+
+<div class="card">
+ <div class="emoji">💎</div>
+ <h3>600 Coins</h3>
+ <div class="price">₹119</div>
+ <p>Premium coin package</p>
+ <button onclick="choose('600 Coins','₹119')">Select Package</button>
+</div>
+
+<div class="card">
+ <div class="emoji">👑</div>
+ <h3>1500 Coins</h3>
+ <div class="price">₹249</div>
+ <p>Ultimate coin package</p>
+ <button onclick="choose('1500 Coins','₹249')">Select Package</button>
+</div>
+
+</div>
+
+<h2>👑 PREMIUM RANKS</h2>
+
+<div class="grid">
+
+<div class="card">
+ <div class="emoji">⭐</div>
+ <h3>VIP RANK</h3>
+ <div class="price">₹99</div>
+ <p>Exclusive VIP rank</p>
+ <button onclick="choose('VIP Rank','₹99')">Select Rank</button>
+</div>
+
+<div class="card">
+ <div class="emoji">⚔️</div>
+ <h3>MVP RANK</h3>
+ <div class="price">₹199</div>
+ <p>Exclusive MVP rank</p>
+ <button onclick="choose('MVP Rank','₹199')">Select Rank</button>
+</div>
+
+<div class="card">
+ <div class="emoji">👑</div>
+ <h3>GOD RANK</h3>
+ <div class="price">₹299</div>
+ <p>Exclusive GOD rank</p>
+ <button onclick="choose('GOD Rank','₹299')">Select Rank</button>
+</div>
+
+</div>
+
+<div class="formbox" id="order">
+ <h2>🛒 YOUR ORDER</h2>
+
+ <label>Minecraft Username</label>
+ <input id="username" placeholder="Enter your Minecraft username">
+
+ <label>Edition</label>
+ <select id="edition">
+  <option value="Java">Java Edition</option>
+  <option value="Bedrock">Bedrock / MCPE</option>
+ </select>
+
+ <label>Selected Package</label>
+ <input id="package" placeholder="Select a package above" readonly>
+
+ <label>Price</label>
+ <input id="price" placeholder="Package price" readonly>
+
+ <button onclick="preview()">PREVIEW ORDER</button>
+
+ <p class="notice">
+ This is a store preview only. Payment and automatic delivery are not connected yet.
+ </p>
+</div>
+
+</main>
+
+<footer>
+ © 2026 VEXORA MC. All Rights Reserved.<br>
+ Minecraft is a trademark of Microsoft/Mojang.
+</footer>
+
+<script>
+function choose(name,price){
+ document.getElementById("package").value=name;
+ document.getElementById("price").value=price;
+ document.getElementById("order").scrollIntoView({
+  behavior:"smooth"
+ });
+}
+
+function preview(){
+ let username=document.getElementById("username").value.trim();
+ let edition=document.getElementById("edition").value;
+ let pack=document.getElementById("package").value;
+ let price=document.getElementById("price").value;
+
+ if(!username){
+  alert("Please enter your Minecraft username.");
+  return;
+ }
+ if(!pack){
+  alert("Please select a package.");
+  return;
+ }
+
+ alert(
+  "VEXORA MC ORDER PREVIEW\n\n"+
+  "Username: "+username+
+  "\nEdition: "+edition+
+  "\nPackage: "+pack+
+  "\nPrice: "+price+
+  "\n\nThis is only a preview. No payment has been made."
+ );
+}
+</script>
+
+</body>
+</html>
