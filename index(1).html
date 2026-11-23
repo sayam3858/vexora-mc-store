@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10150f">
+<title>VEXORA MC | Premium Store</title>
+<style>
+:root{--bg:#0b100d;--panel:#141d17;--panel2:#1b281f;--gold:#e9bd55;--gold2:#ffdf87;--muted:#a9b7aa;--line:#2b3b30;--green:#8acb79}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0%,#273b28 0,transparent 32%),var(--bg);color:#f4f5ef;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:#0b100deF;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:1000;letter-spacing:2px;font-size:22px}.brand span{color:var(--gold)}nav{display:flex;gap:22px;color:var(--muted);font-size:14px}nav a:hover{color:var(--gold)}
+.btn{border:0;border-radius:10px;padding:12px 17px;font-weight:800;cursor:pointer;background:linear-gradient(135deg,var(--gold2),#c58d2e);color:#211707}.btn.secondary{background:#243329;color:#eaf2e9;border:1px solid #3b5540}.btn:disabled{opacity:.45;cursor:not-allowed}
+.hero{padding:72px 0 46px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:32px}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:3px;font-weight:900}.hero h1{font-size:clamp(42px,7vw,72px);line-height:.98;margin:14px 0}.hero h1 span{color:var(--gold)}.hero p{color:var(--muted);line-height:1.7;max-width:570px}.hero-art{min-height:290px;border:1px solid #53613d;border-radius:22px;background:linear-gradient(145deg,#263a2a,#111a14 65%);display:grid;place-items:center;position:relative;overflow:hidden}.hero-art:before,.hero-art:after{content:"";position:absolute;width:190px;height:190px;border:1px solid #ffffff12;transform:rotate(45deg)}.hero-art:after{width:260px;height:260px}.chest{font-size:110px;filter:drop-shadow(0 14px 20px #0009);z-index:1}.floating{position:absolute;color:var(--gold2);font-weight:900}.f1{top:22px;left:24px}.f2{bottom:24px;right:24px}
+.section{padding:32px 0 48px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:20px}.section h2{font-size:30px;margin:0}.section-head p{color:var(--muted);margin:7px 0 0}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;min-height:220px}.card .emoji{font-size:35px}.card h3{margin:12px 0 5px}.card p{color:var(--muted);font-size:13px;line-height:1.5;flex:1}.price{font-size:24px;color:var(--gold2);font-weight:950;margin:12px 0}.tag{font-size:10px;letter-spacing:1px;color:var(--green);font-weight:900}
+.formbox{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:8px}.field.full{grid-column:1/-1}label{font-size:13px;color:#dce5da;font-weight:700}input,select{width:100%;padding:13px 14px;background:#0c130e;border:1px solid #354739;border-radius:10px;color:white;font:inherit}input:focus,select:focus{outline:2px solid #b98d3c}.notice{color:var(--muted);font-size:12px;line-height:1.6}.status{padding:12px;border-radius:10px;background:#17271b;border:1px solid #36543b;color:#c9e5c4;font-size:13px;display:none}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.modal{position:fixed;inset:0;background:#000b;display:none;place-items:center;padding:20px;z-index:10}.modal.show{display:grid}.modal-box{max-width:470px;width:100%;background:#17231a;border:1px solid #526347;border-radius:18px;padding:24px}.modal-box h3{margin-top:0;color:var(--gold2)}.close{float:right;background:none;border:0;color:white;font-size:23px;cursor:pointer}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:48px}.grid{grid-template-columns:repeat(2,1fr)}nav{gap:12px;font-size:12px}.nav{height:auto;min-height:68px;flex-wrap:wrap;padding:12px 0}}
+@media(max-width:520px){.grid{grid-template-columns:1fr 1fr;gap:9px}.card{padding:14px;min-height:225px}.formbox{grid-template-columns:1fr}.field.full{grid-column:auto}nav{width:100%;justify-content:space-between}.hero-art{min-height:220px}.chest{font-size:85px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#">VEXORA<span> MC</span></a><nav><a href="#coins">Coins</a><a href="#ranks">Ranks</a><a href="#order">Purchase</a></nav><a class="btn secondary" href="#order">Open Store</a></div></header>
+<main class="wrap">
+<section class="hero">
+ <div><div class="eyebrow">OFFICIAL SERVER STORE</div><h1>LEVEL UP YOUR<br><span>ADVENTURE.</span></h1><p>Get VEXORA coins and premium ranks for your Minecraft adventure. Choose a package, enter your in-game name and follow the checkout instructions.</p><a class="btn" href="#coins">Explore packages</a></div>
+ <div class="hero-art"><span class="floating f1">✦ VEXORA TREASURES ✦</span><div class="chest">🧰</div><span class="floating f2">COINS • RANKS • REWARDS</span></div>
+</section>
+<section class="section" id="coins"><div class="section-head"><div><div class="eyebrow">STORE CURRENCY</div><h2>💰 Coin Packages</h2><p>Pick a coin bundle for your next adventure.</p></div></div><div class="grid" id="coinGrid"></div></section>
+<section class="section" id="ranks"><div class="section-head"><div><div class="eyebrow">EXCLUSIVE PERKS</div><h2>👑 Premium Ranks</h2><p>Choose a rank to unlock server perks.</p></div></div><div class="grid" id="rankGrid"></div></section>
+<section class="section" id="order"><div class="section-head"><div><div class="eyebrow">SECURE ORDER DETAILS</div><h2>🛒 Start your order</h2><p>Enter your Minecraft username and choose an item.</p></div></div>
+ <form class="formbox" id="orderForm">
+  <div class="field"><label for="player">Minecraft username</label><input id="player" name="player" maxlength="16" required placeholder="Your in-game name" autocomplete="off"></div>
+  <div class="field"><label for="edition">Edition</label><select id="edition"><option>Java</option><option>Bedrock</option></select></div>
+  <div class="field full"><label for="product">Choose package</label><select id="product" required></select></div>
+  <div class="field full"><button class="btn" type="submit">Continue to checkout</button><div class="notice">This is a website preview. No payment is collected here and no coins or ranks are delivered yet.</div><div class="status" id="status" role="status"></div></div>
+ </form>
+</section>
+</main>
+<footer><div class="wrap footer-row"><span>© 2026 VEXORA MC Store • Unofficial fan-made server store</span><span>Support: add your official Discord or email before launch.</span></div><div class="wrap notice" style="padding-top:12px">Minecraft is a trademark of Mojang. This store is not affiliated with or endorsed by Mojang or Microsoft. Final packages, prices and perks must match your server rules.</div></footer>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-box"><button class="close" id="close" aria-label="Close">×</button><h3 id="modalTitle">Order preview</h3><p id="modalText"></p><p class="notice">Payment integration is not connected. Do not send money to anyone based on this preview. A secure payment gateway and server-side payment verification must be configured before launch.</p><button class="btn secondary" id="modalOk">Got it</button></div></div>
+<script>
+const products=[
+ {id:"c100",type:"Coins",name:"100 Coins",price:49,icon:"🪙",desc:"A small boost to get started."},
+ {id:"c250",type:"Coins",name:"250 Coins",price:99,icon:"💰",desc:"A little extra for your adventure."},
+ {id:"c600",type:"Coins",name:"600 Coins",price:199,icon:"💎",desc:"More coins for more choices."},
+ {id:"c1500",type:"Coins",name:"1500 Coins",price:399,icon:"🏆",desc:"A treasure-sized coin bundle."},
+ {id:"vip",type:"Rank",name:"VIP Rank",price:99,icon:"🥇",desc:"Entry-level premium rank. Perks to be configured."},
+ {id:"mvp",type:"Rank",name:"MVP Rank",price:199,icon:"💠",desc:"A higher-tier rank. Perks to be configured."},
+ {id:"god",type:"Rank",name:"GOD Rank",price:399,icon:"👑",desc:"Top-tier rank. Perks to be configured."}
+];
+const coinGrid=document.querySelector("#coinGrid"),rankGrid=document.querySelector("#rankGrid"),select=document.querySelector("#product");
+function card(p){return `<article class="card"><div class="emoji">${p.icon}</div><div class="tag">${p.type.toUpperCase()}</div><h3>${p.name}</h3><p>${p.desc}</p><div class="price">₹${p.price}</div><button class="btn secondary choose" data-id="${p.id}">Choose package</button></article>`}
+coinGrid.innerHTML=products.filter(p=>p.type==="Coins").map(card).join("");
+rankGrid.innerHTML=products.filter(p=>p.type==="Rank").map(card).join("");
+select.innerHTML='<option value="">Select a package</option>'+products.map(p=>`<option value="${p.id}">${p.name} — ₹${p.price}</option>`).join("");
+document.addEventListener("click",e=>{const b=e.target.closest(".choose");if(b){select.value=b.dataset.id;document.querySelector("#order").scrollIntoView({behavior:"smooth"});}});
+const modal=document.querySelector("#modal");
+document.querySelector("#orderForm").addEventListener("submit",e=>{
+ e.preventDefault();const player=document.querySelector("#player").value.trim();const edition=document.querySelector("#edition").value;const p=products.find(x=>x.id===select.value);
+ if(!/^[A-Za-z0-9_]{3,16}$/.test(player)){alert("Enter a valid Minecraft username (3–16 letters, numbers or underscores).");return;}
+ if(!p){alert("Please choose a package.");return;}
+ document.querySelector("#modalTitle").textContent="Order preview";
+ document.querySelector("#modalText").textContent=`You selected ${p.name} for ₹${p.price}. Player: ${player} (${edition}).`;
+ modal.classList.add("show");
+});
+function closeModal(){modal.classList.remove("show")}
+document.querySelector("#close").onclick=closeModal;document.querySelector("#modalOk").onclick=closeModal;modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});
+</script>
+</body></html>
